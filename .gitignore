@@ -1,0 +1,6 @@
+Cargo.lock
+Cargo.toml
+.env
+target
+
+src/main.rs
