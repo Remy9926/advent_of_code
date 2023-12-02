@@ -2,6 +2,4 @@
 
 For the first part of Day 1, we are only required to check if a specific character is a digit. To find the first digit, we can iterate through each line character by character until the character that we are at is a digit and that will be the first digit. To find the second digit, we can start from the end of the line until we encounter a digit, and that will be our second digit.
 
-<br/>
-
 For the second part of Day 1, we are now required to check not just if the character is a digit, but if the word spelled contains, or is the spelling of a number. Therefore, we can still do the check to see if our character is a digit, and if it is that is going to be our first digit. However, in addition to checking whether or not the character is a digit, we should also keep track of all the characters that we have seen thus far and check if what we have encountered thus far contains the spelling of a digit. If it does, then we know we have found the corresponding digit. We will repeat this going backwards from the line to find the second digit as well, except we have to make sure that we are concatenating to the beginning of our string so that we are maintaining the order of characters as we would see them within the line itself.
