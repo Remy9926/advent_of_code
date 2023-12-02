@@ -1,5 +1,20 @@
-async fn get_input_2022(day: u8, aoc_token: &str) -> String {
-    let url = "https://adventofcode.com".parse::<reqwest::Url>().unwrap();
+use reqwest;
+
+const AOC_BASEURL: &str = "https://adventofcode.com";
+
+/// Gets the puzzle input associated with a specific user for AOC 2022 for the specified day
+/// and returns it
+/// 
+/// # Arguments
+/// 
+/// * `day` - The day's puzzle input that you want to get
+/// * `aoc_token` - Your AOC token associated with your account
+/// 
+/// # Return
+/// 
+/// The puzzle input for the corresponding user
+pub async fn get_input_2022(day: u8, aoc_token: &str) -> String {
+    let url = AOC_BASEURL.parse::<reqwest::Url>().unwrap();
     
     let jar = reqwest::cookie::Jar::default();
     jar.add_cookie_str(aoc_token, &url);
@@ -20,8 +35,19 @@ async fn get_input_2022(day: u8, aoc_token: &str) -> String {
     resp.unwrap()
 }
 
-async fn get_input_2023(day: u8, aoc_token: &str) -> String {
-    let url = "https://adventofcode.com".parse::<reqwest::Url>().unwrap();
+/// Gets the puzzle input associated with a specific user for AOC 2023 for the specified day
+/// and returns it
+/// 
+/// # Arguments
+/// 
+/// * `day` - The day's puzzle input that you want to get
+/// * `aoc_token` - Your AOC token associated with your account
+/// 
+/// # Return
+/// 
+/// The puzzle input for the corresponding user
+pub async fn get_input_2023(day: u8, aoc_token: &str) -> String {
+    let url = AOC_BASEURL.parse::<reqwest::Url>().unwrap();
     
     let jar = reqwest::cookie::Jar::default();
     jar.add_cookie_str(aoc_token, &url);
