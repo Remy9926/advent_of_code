@@ -1,16 +1,6 @@
 use dotenv::dotenv;
 use std::collections::HashMap;
 
-async fn main() {
-    dotenv().ok();
-
-    let aoc_token = std::env::var("AOC_TOKEN").expect("Please set a valid AOC token");
-    let input = get_input_2023(1, &aoc_token).await;
-    let solution_1 = part_1(&input);
-    let solution_2 = part_2(&input);
-    println!("Part 1: {}\n Part 2: {}", solution_1, solution_2);
-}
-
 fn part_1(puzzle_input: &str) -> i64 {
     let lines: Vec<_> = puzzle_input.trim().split("\n").collect();
     let mut total = 0;
