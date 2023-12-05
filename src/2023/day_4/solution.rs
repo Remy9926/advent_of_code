@@ -55,7 +55,6 @@ fn part_2(puzzle_input: &str) -> i64 {
     
     for i in 0..lines.len() {
         let line = lines[i];
-        println!("{}", line);
         let card: Vec<_> = line.split(":").collect();
         let numbers = card[1].trim();
         let mut winning_nums: Vec<String> = Vec::new();
